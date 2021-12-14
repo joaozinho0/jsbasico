@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font: 12pt arial;
+    }
+    button{
+        font-size: 12pt; padding: 30px;
+    }
+</style>
+<body>
+    <h1>Trabalhando Com Dados v2.0</h1>
+
+
+    <button onclick="inicio()">Clique Para Começar</button>
+
+    <section id="resultado">
+        <!-- nesse texto abaixo vai aparecer a resposta  -->
+
+        <p>Aqui vai aparecer o resultado...</p>
+
+    </section>
+
+    <script>
+        function inicio() {
+            // variavel nome vai receber o conteudo da caixa digitada 
+            let nome = window.prompt('Qual é o Seu Nome')
+            
+            // tambem funciona com o comando abaixo
+            let res = window.document.getElementById('resultado')
+
+            // let res = window.document.querySelector('section#resultado')
+            res.innerHTML = `<p> Olá, <strong>${nome}</strong>! É um grande prazer te conhcer!`
+        }
+    </script>
+    
+</body>
+</html>
